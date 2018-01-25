@@ -1,0 +1,9 @@
+version: '2'
+services:
+
+  php:
+    container_name: ambphp
+    build: docker/php
+    volumes:
+      - ./app:/app
+    tty: true
