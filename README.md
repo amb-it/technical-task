@@ -23,3 +23,12 @@ every animal has such ability. There are several issues and we hope you'd solve 
 * php 7
 * Unit tests
 * docker environment
+
+## To start project:
+
+docker-compose build
+docker-compose up -d
+
+## To run project inside container:
+docker exec -i -t php-with-composer /bin/bash
+php app/public/index.php

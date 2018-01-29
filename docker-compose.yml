@@ -2,7 +2,7 @@ version: '2'
 services:
 
   php:
-    container_name: ambphp
+    container_name: php-with-composer
     build: docker/php
     volumes:
       - ./app:/app
