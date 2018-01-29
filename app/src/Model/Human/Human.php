@@ -14,7 +14,7 @@ abstract class Human implements iCreature
     protected $name;
     protected $type;
 
-    public function __construct($name)
+    public function __construct(string $name)
     {
         $this->name = $name;
 
@@ -22,12 +22,12 @@ abstract class Human implements iCreature
         $this->type = $class->getShortName();
     }
 
-    public function getName()
+    public function getName() :string
     {
         return $this->name;
     }
 
-    public function getType()
+    public function getType() :string
     {
         return $this->type;
     }

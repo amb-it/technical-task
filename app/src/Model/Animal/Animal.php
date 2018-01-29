@@ -10,12 +10,11 @@ use App\Model\Mixin\CreatureBehaviour;
 abstract class Animal implements iCreature, iAnimal
 {
     use CreatureBehaviour;
-    // todo: add mixin eat
-    // todo: add man ate popcorn
+
     protected $name;
     protected $type;
 
-    public function __construct($name = 'without name')
+    public function __construct(string $name)
     {
         $this->name = $name;
 
@@ -23,12 +22,12 @@ abstract class Animal implements iCreature, iAnimal
         $this->type = $class->getShortName();
     }
 
-    public function getName()
+    public function getName() :string
     {
         return $this->name;
     }
 
-    public function getType()
+    public function getType() :string
     {
         return $this->type;
     }

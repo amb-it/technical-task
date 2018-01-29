@@ -6,7 +6,7 @@ abstract class Controller
 {
     protected $response = '';
 
-    public function response()
+    public function response() :void
     {
         echo $this->response;
     }

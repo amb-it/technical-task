@@ -9,17 +9,17 @@ class Dog extends Animal
 {
     use Walk;
 
-    public function wuf()
+    public function wuf() :string
     {
         return 'wuf';
     }
 
-    public function run()
+    public function run() :string
     {
         return 'run';
     }
 
-    public function byte(iCreature $creature)
+    public function byte(iCreature $creature) :string
     {
         return 'byte ' . mb_strtolower($creature->getType()) . ' ' . $creature->getName();
     }

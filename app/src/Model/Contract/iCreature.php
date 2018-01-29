@@ -4,7 +4,7 @@ namespace App\Model\Contract;
 
 interface iCreature
 {
-    public function getName();
-    public function getType();
-    public function eat();
+    public function getName() :string;
+    public function getType() :string;
+    public function eat() :string;
 }

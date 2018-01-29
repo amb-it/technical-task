@@ -7,7 +7,7 @@ use App\Model\Animal\Contract\iAnimal;
 
 class AnimalFactory
 {
-    public static function create($title, $name) :iAnimal
+    public static function create(string $title, string $name) :iAnimal
     {
         switch ($title) {
             case 'cat':

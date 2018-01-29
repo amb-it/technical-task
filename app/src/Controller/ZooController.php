@@ -8,7 +8,7 @@ use App\Model\Human\Visitor;
 
 class ZooController extends Controller
 {
-    public function explore()
+    public function explore() :void
     {
         $animals = $this->getAnimalObjectsArray(Config::get()['animals']);
 
@@ -17,7 +17,7 @@ class ZooController extends Controller
         $this->response .= $this->showAnimalsBehaviours($animals);
     }
 
-    protected function getAnimalObjectsArray($animals)
+    protected function getAnimalObjectsArray($animals) :array
     {
         $array_of_objects = [];
 
@@ -28,7 +28,7 @@ class ZooController extends Controller
         return $array_of_objects;
     }
 
-    protected function showAllAnimals($animals)
+    protected function showAllAnimals(array $animals) :string
     {
         $output = "Animals available in the Zoo:\n";
 
@@ -39,7 +39,7 @@ class ZooController extends Controller
         return $output;
     }
 
-    protected function showAnimalsBehaviours($animals)
+    protected function showAnimalsBehaviours(array $animals) :void
     {
         $output  = "\nAnd what is going on in the Zoo:\n";
 

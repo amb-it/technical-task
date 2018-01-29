@@ -7,12 +7,12 @@ class Sparrow extends Animal
 {
     use Walk;
 
-    public function tweet()
+    public function tweet() :string
     {
         return 'tweet';
     }
 
-    public function fly()
+    public function fly() :string
     {
         return 'fly';
     }

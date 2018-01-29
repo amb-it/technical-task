@@ -4,7 +4,7 @@ namespace App\Model\Mixin;
 
 trait Walk
 {
-    public function walk()
+    public function walk() :string
     {
         return 'walk';
     }

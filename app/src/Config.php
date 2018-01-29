@@ -4,7 +4,7 @@ namespace App;
 
 class Config
 {
-    public static function get()
+    public static function get() :array
     {
         $config['animals'] = [
             ['title' => 'cat',      'name' => 'Garfield'],

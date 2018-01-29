@@ -6,7 +6,7 @@ class Kernel
 {
     const CONTROLLER_NAMESPACE = 'App\Controller\\';
 
-    public function run()
+    public function run() :void
     {
         // depending on tasks here can be some routing in the future
         if (!isset($router)) {
@@ -23,8 +23,7 @@ class Kernel
 
             $controller->response();
         } catch (\Exception $e) {
-            echo $e->getMessage();
+            echo $e->getMessage() . "\n";
         }
-
     }
 }
