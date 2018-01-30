@@ -19,7 +19,7 @@ abstract class Human implements iCreature
         $this->name = $name;
 
         $class = new \ReflectionClass($this);
-        $this->type = $class->getShortName();
+        $this->type = strtolower($class->getShortName());
     }
 
     public function getName() :string

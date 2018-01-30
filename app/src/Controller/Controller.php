@@ -8,6 +8,6 @@ abstract class Controller
 
     public function response() :void
     {
-        echo $this->response;
+        echo "\n" . $this->response . "\n";
     }
 }

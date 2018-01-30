@@ -7,9 +7,9 @@ use App\Model\Animal\Contract\iAnimal;
 
 class AnimalFactory
 {
-    public static function create(string $title, string $name) :iAnimal
+    public static function create(string $type, string $name) :iAnimal
     {
-        switch ($title) {
+        switch ($type) {
             case 'cat':
                 $animal = new Cat($name);
                 break;
@@ -27,7 +27,7 @@ class AnimalFactory
                 break;
 
             default:
-                throw new \Exception('Can not create animal with title = ' . $title);
+                throw new \Exception('Can not create animal with title = ' . $type);
         }
 
         return $animal;

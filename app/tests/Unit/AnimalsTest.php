@@ -12,7 +12,7 @@ class AnimalsTest extends TestCase
         $cat = new Cat('Tom');
 
         $this->assertEquals($cat->getName(), 'Tom');
-        $this->assertEquals($cat->getType(), 'Cat');
+        $this->assertEquals($cat->getType(), 'cat');
     }
 
     public function testCatActions()

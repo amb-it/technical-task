@@ -19,15 +19,15 @@ class AnimalFactoryTest extends TestCase
 
     public function testAnimalFactoryWithDisallowedType()
     {
-        AnimalFactory::create('dinosaur', 'Rex');
-
         $this->expectException(\Exception::class);
+
+        AnimalFactory::create('dinosaur', 'Rex');
     }
 
     public function testAnimalFactoryWithoutName()
     {
-        AnimalFactory::create('cat');
+        $this->expectException(\ArgumentCountError::class);
 
-        $this->expectException(\Exception::class);
+        AnimalFactory::create('cat');
     }
 }

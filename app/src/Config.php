@@ -7,11 +7,11 @@ class Config
     public static function get() :array
     {
         $config['animals'] = [
-            ['title' => 'cat',      'name' => 'Garfield'],
-            ['title' => 'cat',      'name' => 'Tom'],
-            ['title' => 'dog',      'name' => 'Droopy'],
-            ['title' => 'sparrow',  'name' => 'Jack'],
-            ['title' => 'rat',      'name' => 'Splinter']
+            ['type' => 'cat',      'name' => 'Garfield'],
+            ['type' => 'cat',      'name' => 'Tom'],
+            ['type' => 'dog',      'name' => 'Droopy'],
+            ['type' => 'sparrow',  'name' => 'Jack'],
+            ['type' => 'rat',      'name' => 'Splinter']
         ];
 
         return $config;

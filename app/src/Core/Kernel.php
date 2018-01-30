@@ -23,7 +23,7 @@ class Kernel
 
             $controller->response();
         } catch (\Exception $e) {
-            echo $e->getMessage() . "\n";
+            echo "Error. " . $e->getMessage() . "\n";
         }
     }
 }

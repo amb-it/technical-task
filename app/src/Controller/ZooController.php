@@ -22,7 +22,7 @@ class ZooController extends Controller
         $array_of_objects = [];
 
         foreach ($animals as $animal) {
-            $array_of_objects[] = AnimalFactory::create($animal['title'], $animal['name']);
+            $array_of_objects[] = AnimalFactory::create($animal['type'], $animal['name']);
         }
 
         return $array_of_objects;
@@ -52,12 +52,12 @@ class ZooController extends Controller
 
         foreach ($animals as $animal) {
             switch ($animal->getType()) {
-                case 'Cat':
+                case 'cat':
                     $output .= 'cat ' . $animal->getName() .
                         ' is ' . $animal->walk() . 'ing and saying ' . $animal->meow() . "\n";
                     break;
 
-                case 'Dog':
+                case 'dog':
                     $output .= 'dog ' . $animal->getName() . ' ' .
                         $animal->walk() . 'ed, then ' .
                         $animal->wuf() . 'ed to visitor '. $visitor->getName() .
@@ -65,14 +65,14 @@ class ZooController extends Controller
                         ' and ' . $animal->byte($visitor) . "\n";
                     break;
 
-                case 'Sparrow':
+                case 'sparrow':
                     $output .= 'sparrow ' . $animal->getName() .
                         ' just ' . $animal->walk() . 'ed, ' .
                         $animal->tweet() . 'ed and then ' .
                         $animal->fly() . "ed away\n";
                     break;
 
-                case 'Rat':
+                case 'rat':
                     $output .= 'rat ' . $animal->getName() .
                         ' set at the corner and made sound like a ' . $animal->pi() . "\n";
             }
