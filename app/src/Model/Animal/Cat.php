@@ -8,6 +8,9 @@ class Cat extends Animal
 {
     use Walk;
 
+    /**
+     * @return string
+     */
     public function meow() :string
     {
         return 'meow';

@@ -22,11 +22,17 @@ abstract class Animal implements iCreature, iAnimal
         $this->type = strtolower($class->getShortName());
     }
 
+    /**
+     * @return string
+     */
     public function getName() :string
     {
         return $this->name;
     }
 
+    /**
+     * @return string
+     */
     public function getType() :string
     {
         return $this->type;

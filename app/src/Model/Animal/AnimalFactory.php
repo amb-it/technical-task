@@ -7,6 +7,14 @@ use App\Model\Animal\Contract\iAnimal;
 
 class AnimalFactory
 {
+    /**
+     * Creates object of corresponding animal
+     *
+     * @param string $type
+     * @param string $name
+     * @return iAnimal
+     * @throws \Exception
+     */
     public static function create(string $type, string $name) :iAnimal
     {
         switch ($type) {

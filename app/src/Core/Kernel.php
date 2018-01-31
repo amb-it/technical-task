@@ -6,6 +6,9 @@ class Kernel
 {
     const CONTROLLER_NAMESPACE = 'App\Controller\\';
 
+    /**
+     *  Here performed some routing, response and Exception handling
+     */
     public function run() :void
     {
         // depending on tasks here can be some routing in the future

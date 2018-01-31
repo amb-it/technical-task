@@ -4,6 +4,12 @@ namespace App;
 
 class Config
 {
+    /**
+     * Returns config as array
+     * Array of animals is as starting point
+     *
+     * @return array
+     */
     public static function get() :array
     {
         $config['animals'] = [

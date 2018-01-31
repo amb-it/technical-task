@@ -8,15 +8,25 @@ use App\Model\Human\Visitor;
 
 class ZooController extends Controller
 {
+    /**
+     *  Show all animals in the Zoo and show animals behaviour examples
+     */
     public function explore() :void
     {
         $animals = $this->getAnimalObjectsArray(Config::get()['animals']);
 
-        $this->response .= $this->showAllAnimals($animals);
+        $this->response .= $this->showAnimals($animals);
 
         $this->response .= $this->showAnimalsBehaviours($animals);
     }
 
+    /**
+     * Transform array of animals types and names to array of objects
+     *
+     * @param $animals
+     * @return array
+     * @throws \Exception
+     */
     protected function getAnimalObjectsArray($animals) :array
     {
         $array_of_objects = [];
@@ -28,7 +38,13 @@ class ZooController extends Controller
         return $array_of_objects;
     }
 
-    protected function showAllAnimals(array $animals) :string
+    /**
+     * Show animals (list of their types and names)
+     *
+     * @param array $animals
+     * @return string
+     */
+    protected function showAnimals(array $animals) :string
     {
         $output = "Animals available in the Zoo:\n";
 
@@ -39,7 +55,13 @@ class ZooController extends Controller
         return $output;
     }
 
-    protected function showAnimalsBehaviours(array $animals) :void
+    /**
+     * Show animals behaviour as some story what was going on when visitor came to the Zoo
+     *
+     * @param array $animals
+     * @return string
+     */
+    protected function showAnimalsBehaviours(array $animals) :string
     {
         $output  = "\nAnd what is going on in the Zoo:\n";
 
@@ -78,6 +100,6 @@ class ZooController extends Controller
             }
         }
 
-        $this->response .= $output;
+        return $output;
     }
 }
