@@ -24,11 +24,26 @@ every animal has such ability. There are several issues and we hope you'd solve 
 * Unit tests
 * docker environment
 
-## To start project:
+# Solution by Vladimir Voznyi
+### To run docker environment:
 
+```
 docker-compose build
 docker-compose up -d
+```
 
-## To run project inside container:
+### To work with correct environment enter the container:
+
+```
 docker exec -i -t php-with-composer /bin/bash
+```
+To see how project works:
+```
 php app/public/index.php
+```
+
+To run tests:
+```
+cd app
+vendor/bin/phpunit
+```
